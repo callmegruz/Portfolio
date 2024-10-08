@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome CDN link -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div id="header">
+        <div class="container">
+            <nav>
+                <img src="Images/G-removebg-preview.png" class="logo" alt="Logo">
+                <ul>
+                    <li><a href="#header">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#portfolio">Portfolio</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+            </nav>
+            <div class="header-text">
+                <p>Full Stack Developer/Data Scientist</p>
+                <h1>Hi, I'm <span>Gurucharan</span><br>Surianarayanan from United Kingdom</h1>
+            </div>
+            
+        </div>
+
+    </div>
+<!----------about------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="Images/9940646982-removebg-preview.png" alt="">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About me</h1>
+                    <p>I am a Computer Science graduate with a Bachelor of Engineering degree in CSE. I have 1 year and 5 months of professional experience as a Big Data Developer at Cognizant (CTS) in India. My academic journey continued with a specialization in Data Science from VIT Bangalore. Currently, I am pursuing an MSc in Advanced Software Engineering at the University of Leicester, where I am further honing my technical expertise and broadening my knowledge in cutting-edge software technologies.</p>
+                    <div class="tab-titles">
+                        <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                        <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                        <p class="tab-links" onclick="opentab('education')">Education</p>
+                    </div>
+                    <div class="tab-contents active-tab" id="skills">
+                        <ol>
+                            <li><span>Java</span><br>Creating Object based oriented applications</li>
+                            <li><span>Python</span><br>Model building and Prediction (Machine Learning)</li>
+                            <li><span>Web and App Development</span><br>Creating Web and Mobile applications</li>
+                        </ol>
+                    </div>
+                    <div class="tab-contents" id="experience">
+                        <ol>
+                            <li><span>2022 - 2023</span><br>Programmer Analyst at CTS</li>
+                            <li><span>2022</span><br>Intern at CTS</li>
+                        </ol>
+                    </div>
+                    <div class="tab-contents" id="education">
+                        <ol>
+                            <li><span>2025</span><br>MSc From University of Leicester</li>
+                            <li><span>2023</span><br>PGP from VIT Bangalore</li>
+                            <li><span>2022</span><br>B.E from St.Joseph's College of Engineering</li>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!--------------portfolio-  ---->
+<div id="portfolio">
+    <div class="container">
+        <h1 class="sub-title">My Projects<span class="project">(Hover the Images)</span></h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="Images/pexels-sora-shimazaki-5935791.jpg">
+                <div class="layer">
+                    <h3>Fraud Detection</h3>
+                    <p>Fraud detection in credit card transactions using Machine Learning Algorithms.</p>
+                    <a href="#" class="btnn">View Project</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/pexels-pixabay-207983.jpg">
+                <div class="layer">
+                    <h3>Emotify</h3>
+                    <p>Song recommendation on spotify by capturing your facial emotion.</p>
+                    <a href="#" class="btnn">View Project</a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="Images/pexels-umutart-17397808.jpg">
+                <div class="layer">
+                    <h3>Movie Recommendation App</h3>
+                    <p>Movie Recommendation system based on user's choice.</p>
+                    <a href="#" class="btnn">View Project</a>
+                </div>
+            </div>
+        </div>
+        <a href="#" class="btn">See more</a>
+    </div>
+</div>
+
+<!-------------- Contact Section  ---->
+<div id="contact">
+    <div class="container">
+        <h1 class="sub-title">Contact Me</h1>
+        <div class="contact-info">
+            <div class="contact-item">
+                <i class="fa-solid fa-phone"></i>
+                <a href="tel:+1234567890">+44 7741022697</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-solid fa-envelope"></i>
+                <a href="mailto:your.email@example.com">charansuriya2000@gmail.com</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-instagram"></i>
+                <a href="https://www.instagram.com/its_gruz" target="_blank">Instagram</a>
+            </div>
+            <div class="contact-item">
+                <i class="fa-brands fa-linkedin"></i>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">LinkedIn</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    var tablinks= document.getElementsByClassName("tab-links");
+    var tabcontents= document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+            tablink.classList.remove("active-link")
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab")
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+</script> 
+
+
+
+
+
+</body>
+</html>
