@@ -1,20 +1,22 @@
-*{
+/* General Styles */
+* {
     margin: 0;
     padding: 0;
-    font-family: 'Popins',sans-serif;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
 
-html{
-   scroll-behavior: smooth;
+html {
+    scroll-behavior: smooth;
 }
 
-body{
-   background: #080808; 
-   color: #fff;
+body {
+    background: #080808;
+    color: #fff;
 }
 
-#header{
+/* Header Styles */
+#header {
     width: 100%;
     height: 100vh;
     background-image: url(Images/pxfuel.png);
@@ -22,113 +24,110 @@ body{
     background-position: center;
 }
 
-.container{
+.container {
     padding: 10px 10%;
 }
 
-/* Reset default styles */
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    padding: 1rem; /* Increase padding for more spacing */
-    position: relative;
+    padding: 1rem;
 }
 
 .logo {
-    max-width: 100px; /* Adjust size as needed */
-    height: auto; /* Maintain aspect ratio */
-    margin-right: auto; /* Push logo to the extreme left */
+    max-width: 100px;
+    height: auto;
 }
 
 ul {
     list-style: none;
     display: flex;
+    gap: 30px; /* Increased gap for spacing between items */
     margin: 0;
     padding: 0;
-    margin-left: auto; /* Push nav items to the extreme right */
-}
-
-nav ul li {
-    display: inline-block;
-    list-style: none;
-    margin-left: 20px;
 }
 
 ul li a {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     color: white;
     text-decoration: none;
     font-size: 18px;
     position: relative;
-   
 }
 
-nav ul li a::after{
+ul li a::after {
     content: '';
-    width: 0%;
+    width: 0;
     height: 3px;
     background: #ff004f;
     position: absolute;
     left: 0;
     bottom: -6px;
     transition: 0.5s;
-
 }
 
-nav ul li a:hover::after{
+ul li a:hover::after {
     width: 100%;
 }
 
-.header-text{
+/* Hamburger Menu */
+.hamburger {
+    display: none;
+    cursor: pointer;
+    font-size: 2rem;
+    color: white;
+}
+
+/* Header Text */
+.header-text {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
     margin-top: 10%;
     font-size: 30px;
     text-align: center;
 }
-.header-text h1{
+
+.header-text h1 {
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font: size 60px;
+    font-size: 60px;
     margin-top: 10%;
 }
 
-.header-text h1 span{
-    color:red;
+.header-text h1 span {
+    color: red;
 }
 
-
-/*-----------about*/
-#about{
+/* About Section */
+#about {
     padding: 80px 0;
-    color: #ababab ;
+    color: #ababab;
 }
-.row{
+
+.row {
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
-
 }
 
-.about-col-1{
+.about-col-1 {
     flex-basis: 35%;
 }
 
-.about-col-1 img{
+.about-col-1 img {
     width: 100%;
     border-radius: 15px;
 }
 
-.about-col-2{
+.about-col-2 {
     flex-basis: 60%;
 }
 
-.sub-title{
+.sub-title {
     font-size: 45px;
     font-weight: 600;
     color: red;
 }
 
-.about-col-2 p{
+.about-col-2 p {
     font-size: 20px;
     font-weight: 600;
     color: white;
@@ -136,12 +135,12 @@ nav ul li a:hover::after{
     margin-top: 1%;
 }
 
-.tab-titles{
+.tab-titles {
     display: flex;
     margin: 20px 0 40px;
 }
 
-.tab-links{
+.tab-links {
     margin-right: 50px;
     font-size: 18px;
     font-weight: 600;
@@ -149,7 +148,7 @@ nav ul li a:hover::after{
     position: relative;
 }
 
-.tab-links::after{
+.tab-links::after {
     content: '';
     width: 0;
     height: 3px;
@@ -160,33 +159,32 @@ nav ul li a:hover::after{
     transition: 0.5s;
 }
 
-.tab-links.active-link::after{
+.tab-links.active-link::after {
     width: 50%;
 }
 
-.tab-contents ol li{
+.tab-contents ol li {
     list-style: none;
     margin: 10px 0;
     color: white;
     font-weight: 600;
 }
 
-.tab-contents ol li span{
+.tab-contents ol li span {
     color: #ff004f;
     font-size: 20px;
     font-weight: 600;
 }
 
-.tab-contents{
+.tab-contents {
     display: none;
 }
 
-.tab-contents.active-tab{
+.tab-contents.active-tab {
     display: block;
-
 }
 
-/* --------- portfolio --------*/
+/* Portfolio Section */
 #portfolio {
     padding: 80px 0;
 }
@@ -211,24 +209,23 @@ nav ul li a:hover::after{
     display: block;
 }
 
-/* New styling for the layer and hover effect */
 .layer {
     position: absolute;
     top: 0;
     left: 0;
     right: 0;
     bottom: 0;
-    background-color: rgba(0, 0, 0, 0.6); /* Dark overlay */
+    background-color: rgba(0, 0, 0, 0.6);
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    opacity: 0; /* Initially hidden */
-    transition: opacity 0.5s ease; /* Smooth fade-in */
+    opacity: 0;
+    transition: opacity 0.5s ease;
 }
 
 .work:hover .layer {
-    opacity: 1; /* Make it visible on hover */
+    opacity: 1;
 }
 
 .layer h3 {
@@ -255,16 +252,15 @@ nav ul li a:hover::after{
     width: 60px;
     height: 60px;
     text-align: center;
-
 }
 
-.project{
+.project {
     font-size: small;
     font-weight: 600;
     color: white;
 }
 
-.btn{
+.btn {
     text-align: center;
     display: block;
     margin: 50px auto;
@@ -277,8 +273,8 @@ nav ul li a:hover::after{
     transition: background 0.5s;
 }
 
-.btn:hover{
-    background-color: #ff004f;  
+.btn:hover {
+    background-color: #ff004f;
 }
 
 /* Contact Section */
@@ -295,23 +291,23 @@ nav ul li a:hover::after{
 
 .contact-info {
     display: grid;
-    grid-template-columns: repeat(4, 1fr); /* Distribute the contact items evenly */
-    gap: 20px; /* Add even gap between the items */
-    justify-items: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 10px; /* Adjust the padding to align items evenly */
+    grid-template-columns: repeat(5, 1fr); /* Arrange contact items horizontally */
+    gap: 20px; /* Add spacing between items */
+    justify-items: center; /* Center items horizontally */
+    align-items: center; /* Center items vertically */
+    padding: 0 10px;
 }
 
 .contact-item {
-    padding: 15px 30px; /* Add padding to ensure consistent spacing */
+    padding: 20px; /* Add padding for spacing */
     border-radius: 8px;
     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
     transition: transform 0.3s ease;
     display: flex;
-    flex-direction: column;
-    align-items: center;
+    flex-direction: column; /* Stack icon and text vertically */
+    align-items: center; /* Center icon and text */
     justify-content: center;
+    text-align: center;
 }
 
 .contact-item:hover {
@@ -319,21 +315,123 @@ nav ul li a:hover::after{
 }
 
 .contact-item i {
-    font-size: 2rem;
+    font-size: 3rem; /* Larger icon size */
     color: #ff004f; /* Icon color */
-    margin-bottom: 10px;
+    margin-bottom: 10px; /* Space between icon and text */
 }
 
 .contact-item a {
     color: #fff;
     text-decoration: none;
-    font-size: 1.2rem;
+    font-size: 1rem;
     font-weight: bold;
 }
 
-.contact-item a:hover {
-    color: #ff004f; /* Color change on hover */
+.contact-item span {
+   display: none;
 }
 
+/* Media Queries */
+@media (max-width: 768px) {
+    nav ul {
+        display: none;
+        flex-direction: column;
+        position: absolute;
+        top: 60px;
+        right: 0; /* Make the navbar items show on the right */
+        background-color: #080808;
+        width: 50%; /* Make the width smaller so it aligns right */
+        text-align: right; /* Align text to the right */
+    }
 
+    nav ul li {
+        margin: 20px 10px; /* Added some padding to the right */
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav ul.show {
+        display: flex;
+    }
+
+    .container {
+        padding: 10px 5%;
+    }
+
+    .header-text h1 {
+        font-size: 40px;
+    }
+
+    .header-text {
+        font-size: 20px;
+    }
+
+    .about-col-1,
+    .about-col-2 {
+        flex-basis: 100%;
+        text-align: center;
+    }
+
+    .tab-titles {
+        flex-direction: row;
+        text-align: center;
+    }
+    .tab-links{
+        padding-right: 5px;
+    }
+
+    .work-list {
+        grid-template-columns: 1fr; /* Single column for better alignment */
+        grid-gap: 20px;
+    }
+
+    .work img {
+        height: 150px; /* Fixed height for consistent size */
+        width: 300px;
+    }
+
+    .work layer{
+        text-align: center;
+        font-size: 1px;
+    }
+
+
+    #portfolio {
+        padding: 50px 10px;
+    }
+
+    #about,
+    #contact {
+        padding: 50px 0;
+    }
+
+    .contact-info {
+        grid-template-columns: repeat(4, 1fr); /* Keep icons horizontally aligned in one row */
+        gap: 10px; /* Reduce gap for compact layout */
+    }
+
+    /* Completely remove the text on mobile */
+    .contact-item span {
+        display: none; /* Completely remove text in mobile view */
+    }
+
+    /* Icon adjustments */
+    .contact-item i {
+        font-size: 2rem; /* Maintain icon size */
+        margin-bottom: 0; /* Remove extra margin */
+    }
+
+    .contact-item {
+        padding: 10px 0; /* Compact padding for mobile */
+        flex-direction: column; /* Ensure icons are still stacked */
+    }
+
+    /* Make the icon clickable */
+    .contact-item i {
+        cursor: pointer;
+    }
+}
+        
 
