@@ -13,20 +13,22 @@
         <div class="container">
             <nav>
                 <img src="images/G-removebg-preview.png" class="logo" alt="Logo">
-                <ul>
+                <ul id="navbar">
                     <li><a href="#header">Home</a></li>
                     <li><a href="#about">About</a></li>
                     <li><a href="#portfolio">Portfolio</a></li>
                     <li><a href="#contact">Contact</a></li>
                 </ul>
+                <!-- Hamburger menu for mobile -->
+                <div class="hamburger" id="hamburger">
+                    <i class="fas fa-bars"></i>
+                </div>
             </nav>
             <div class="header-text">
                 <p>Full Stack Developer/Data Scientist</p>
                 <h1>Hi, I'm <span>Gurucharan</span><br>Surianarayanan from United Kingdom</h1>
             </div>
-            
         </div>
-
     </div>
 <!----------about------- -->
     <div id="about">
@@ -103,29 +105,49 @@
 </div>
 
 <!-------------- Contact Section  ---->
-<div id="contact">
+<section id="contact">
     <div class="container">
-        <h1 class="sub-title">Contact Me</h1>
+        <h2 class="sub-title">Contact Me</h2>
         <div class="contact-info">
+            <!-- Email Contact -->
             <div class="contact-item">
-                <i class="fa-solid fa-phone"></i>
-                <a href="tel:+1234567890">+44 7741022697</a>
+                <a href="mailto:your-email@example.com">
+                    <i class="fa-solid fa-envelope"></i>
+                    <span>Email Me</span> <!-- This will be hidden on mobile -->
+                </a>
             </div>
+            <!-- Phone Contact -->
             <div class="contact-item">
-                <i class="fa-solid fa-envelope"></i>
-                <a href="mailto:your.email@example.com">charansuriya2000@gmail.com</a>
+                <a href="tel:+123456789">
+                    <i class="fa-solid fa-phone"></i>
+                    <span>Call Me</span> <!-- This will be hidden on mobile -->
+                </a>
             </div>
+            <!-- Insta Contact -->
             <div class="contact-item">
-                <i class="fa-brands fa-instagram"></i>
-                <a href="https://www.instagram.com/its_gruz" target="_blank">Instagram</a>
+                <a href="mailto:your-email@example.com">
+                    <i class="fa-brands fa-instagram"></i>
+                    <span>Instagram</span> <!-- This will be hidden on mobile -->
+                </a>
             </div>
+            <!-- LinkedIn Contact -->
             <div class="contact-item">
-                <i class="fa-brands fa-linkedin"></i>
-                <a href="https://www.linkedin.com/in/gurucharan-surianarayanan-6b34361b1/" target="_blank">LinkedIn</a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <i class="fa-brands fa-linkedin"></i>
+                    <span>LinkedIn</span> <!-- This will be hidden on mobile -->
+                </a>
+            </div>
+            <!-- GitHub Contact -->
+            <div class="contact-item">
+                <a href="https://github.com/yourusername" target="_blank">
+                    <i class="fa-brands fa-github"></i>
+                    <span>GitHub</span> <!-- This will be hidden on mobile -->
+                </a>
             </div>
         </div>
     </div>
-</div>
+</section>
+
 
 <script>
     var tablinks= document.getElementsByClassName("tab-links");
@@ -141,5 +163,14 @@
         document.getElementById(tabname).classList.add("active-tab");
     }
 </script> 
+<script>
+    const hamburger = document.getElementById('hamburger');
+    const navbar = document.getElementById('navbar');
+
+    hamburger.addEventListener('click', () => {
+        navbar.classList.toggle('show');
+    });
+</script>
+
 </body>
 </html>
